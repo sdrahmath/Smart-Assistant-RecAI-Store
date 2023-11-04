@@ -1,0 +1,53 @@
+/* Add your custom CSS styles here */
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-image: url(https://cdn.discordapp.com/attachments/992065848502145085/1168180686117670984/1000_F_187834064_r7JxixkJ3DGruVUJBp4tv9GhmFXWLqe3.png?ex=6550d40b&is=653e5f0b&hm=9d3c3960d4928255a846efaa28754affeac29ce7500fde1f27e3e8504920bb77&);
+    padding: 40px;
+    background-repeat: no-repeat;
+    background-size: 100% 140%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    max-width: fit-content;
+}
+.item-card {
+    text-align: center;
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff89;
+    border-radius: 25px;
+    box-shadow: 0 2px 7px 2px #09755d;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.7);
+}
+
+/* Styles for the item image */
+.item-image {
+    mix-blend-mode: multiply;
+    max-height: 40%;
+    flex: 1;
+    max-width: 40%;
+    
+}
+
+/* Styles for the item details */
+.item-details {
+    flex: 2;
+    padding: 0 20px;
+    max-width: fit-content;
+}

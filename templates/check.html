@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <header>
+        <h2 style="font-size:36px; padding:10px;">Check Availability</h2>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('fruits') }}">&lt; Back</a></li>
+            </ul>
+        </nav>
+    </header>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles2.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <br><div class="cardi">
+    <h1>Check Availability of the Product</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data"><br>
+        <p style="font-size:20px; font-weight:bold;">Upload an image for recognition:</p><br>
+        <div class="fromm">
+        <div class="custom-file-upload">
+            <label for="file">Choose a File</label>
+            <input type="file" id="file" name="file" accept="image/*">
+        </div>
+        <input type="submit" value="Upload" class="bold-text"></div>
+    </form></div>
+    <div id="result"><!-- Recognition results will be displayed here -->
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                var resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = ''; // Clear previous results
+                if (data.error) {
+                    resultDiv.innerText = 'Error: ' + data.error;
+                } else {
+                    var html = '<div class="card1">';
+                    html += '<div class="availability">' + data["Stock Availability"] + '</div>';
+                    html += '<div class="card-content">';
+                        html += '<img src="' + data["Image URL"] + '" alt="Product Image">';
+                        html += '<div class="card-info">';
+                        for (var key in data) {
+                            if (key !== "Image URL" && key !== "Stock Availability") {
+                                html += '<p><strong>' + key + ':</strong> ' + data[key] + '</p>';
+                            }
+                        }
+                        html += '</div>'; // Close the card-info div
+                        html += '</div>'; // Close the card-content div
+                        html += '</div>'; // Close the card1 div
+                        resultDiv.innerHTML = html;
+                }
+            })
+            .catch(error => {
+                var resultDiv = document.getElementById('result');
+                resultDiv.innerText = 'Error: ' + error.message;
+            });
+        });
+    </script>
+</body>
+</html>

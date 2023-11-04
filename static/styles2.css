@@ -1,0 +1,141 @@
+/* Style for the body */
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Style for the header */
+
+.cardi {
+    text-align: center;
+    margin: 20px auto;
+    padding: 0 0 20px 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+.cardi h1 {
+    background-color: #0681a0c2;
+    color: #040404;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    font-size: large;
+    margin: 0;
+}
+
+
+/* Style for the form container */
+
+
+/* Style for the file input */
+input[type="file"] {
+    display: block;
+    margin: 10px auto;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #0681a0c2;
+    color: #040404;
+    border-radius: 0px 10px 10px 0px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Style for the result container */
+#result {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    
+    border-radius: 20px;
+}
+/* ... (Previous CSS Styles) ... */
+
+/* Style for the card */
+.card1 {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-width: max-content;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 25px;
+}
+.card-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style for the product image */
+.card1 img {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Style for the card information */
+.card-info {
+    flex: 1;
+    text-align: left;
+}
+
+/* Style for stock availability */
+.availability {
+    background-color: #014b5c;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+input[type="file-upload-button"]{
+    border-radius: 5px;
+}
+/* ... (Remaining CSS Styles) ... */
+/* Style the file input container */
+/* Style the custom file upload container */
+.custom-file-upload {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-color: #014b5c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius:10px 0px 0px 10px;
+    cursor: pointer;
+}
+.custom-file-upload:hover {
+    cursor: pointer;
+}
+
+/* Style the custom label text */
+.custom-file-upload label {
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Hide the default file input */
+.custom-file-upload input[type="file"] {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.fromm{
+    display: flex;
+    text-align: center;
+    
+    justify-content: center;
+}
+.bold-text {
+    font-weight: bold;
+}

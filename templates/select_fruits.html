@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <header style=" border-radius: 15px 15px 0px 0;">
+        <h1>My Online Store</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('fruits') }}">&lt; Back</a></li>
+            </ul>
+        </nav>
+    </header>
+    <title>Selected Fruit</title>
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style1.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body >
+    
+    <div class="container">
+        <h2 style="font-size:36px; text-align: center;
+        max-width: max-content; padding:10px; border-radius:15px; margin:0 auto; box-shadow: 0 2px 7px 2px #09755d; background: rgba(255,255,255,0.7);">Selected Item</h2>
+    <br><br>
+        <div class="item-card">
+
+            <div class="item-image">
+                <img src="{{ data[data['name'] == selected_item]['Image URL'].values[0] }}" width="90%" height="90%" alt="{{ selected_item }}">
+            </div>
+            <div class="item-details">
+                <h1 class="item-heading" style="text-transform: capitalize;">Name: {{ data[data['name'] == selected_item]['name'].values[0] }}</h1>
+                <h1 class="item-heading">Category: {{ data[data['name'] == selected_item]['Category'].values[0] }}</h1>
+                <h1 class="item-heading">Price: {{ data[data['name'] == selected_item]['Price'].values[0] }}</h1>
+                <h1 class="item-heading">Unit of Measure: {{ data[data['name'] == selected_item]['Unit of Measure'].values[0] }}</h1>
+                <h1 class="item-heading">Description: {{ data[data['name'] == selected_item]['Description'].values[0] }}</h1>
+                <h1 class="item-heading">Stock Availability: {{ data[data['name'] == selected_item]['Stock Availability'].values[0] }}</h1>
+                <h1 class="item-heading">Origin: {{ data[data['name'] == selected_item]['Origin'].values[0] }}</h1>
+                </div></div><br><br><br>
+        
+    </div>
+</body>
+</html>

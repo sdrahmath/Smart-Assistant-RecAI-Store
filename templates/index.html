@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Store</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>My Online Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#categories">Products</a></li>
+                <li><a href="#about-us">About </a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+
+      <p></p><br>
+    </div>
+    
+    <h1 style="font-weight: bold; font-style: italic; text-align:center;">Welcome to the Store!</h1><br>
+    <img src="https://cdn.discordapp.com/attachments/992065848502145085/1167818583951282176/banner.jpg?ex=654f82cf&is=653d0dcf&hm=f6054e5a21c3a50359eb88ec37b85a5e05507ce506586ab93524bd6723e8df47&" width="100%" height="420px" alt="Image 1">
+    <div class="carousel-container" id="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/71f5UPOWDqL._AC_UL320_.jpg" alt="Image 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/41fnPBnX5UL._AC_UL320_.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/51E6iD7tCMS._AC_UL320_.jpg" alt="Image 3">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/71qFq44nv-L._AC_UL320_.jpg" alt="Image 4">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/61o9UGbNDhL._AC_UL320_.jpg" alt="Image 5">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/6134rpBfumL._AC_UL320_.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/71wYBAH11UL._AC_UL320_.jpg" alt="Image 3">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/51VvT6rwWIL._AC_UL320_.jpg" alt="Image 4">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://cm4-production-assets.s3.amazonaws.com/1698241747530-screenshot_2.jpg" alt="Image 5">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/51BNv1auG3L._AC_UL320_.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/51RaDbOSIAL._AC_UL320_.jpg" alt="Image 3">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/81UOIOrc8AL._AC_UL320_.jpg" alt="Image 4">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/51E4HeAPmdL._AC_UL320_.jpg" alt="Image 5">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/A1seRUZ636L._AC_UL320_.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/819eoPWb1OL._AC_UL320_.jpg" alt="Image 3">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/61xG7NUYSML._AC_UL320_.jpg" alt="Image 4">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://m.media-amazon.com/images/I/51lKF381MSL._AC_UL320_.jpg" alt="Image 5">
+        </div>
+        <!-- Add more carousel slides here -->
+      </div>
+      <button class="carousel-btn" id="prevBtn">&lt;</button>
+      <button class="carousel-btn" id="nextBtn">&gt;</button>
+    </div><br><br>
+    <div id="categories">
+    <h2 style="text-align: center; padding:10px; padding-top:200px;" >Explore these Categories</h2>
+    <section class="products">
+      <article class="product">
+        <a href="{{ url_for('groceries') }}">  
+        <img src="https://cdn.discordapp.com/attachments/992065848502145085/1167525763126415482/grocieries.jpg?ex=654e7219&is=653bfd19&hm=1a571cd0ff2cc1c904bd3de262a926e8ca2246593c13575db5f2dc06e23ad693&" alt="Product 1"></a>
+          <h4>Grocieries</h4>
+      </article>
+  
+        <article class="product"><a href="{{ url_for('appliances') }}">
+          <img src="https://cdn.discordapp.com/attachments/992065848502145085/1167525762178502706/Appliances.jpg?ex=654e7219&is=653bfd19&hm=9850678c27c08b16c0ae1fd09b043e73a8bf75750bc7f5e8b772609097a49b07&" alt="Product 1">
+        </a><h4>Appliances</h4>
+          
+      </article>
+      <article class="product"><a href="{{ url_for('kitchen') }}">
+        <img src="https://cdn.discordapp.com/attachments/992065848502145085/1167525763399024640/Home.jpg?ex=654e7219&is=653bfd19&hm=4477ace0ec7bd56ae01c9cfc2b9beda400cf46b1cd1246f08133c661ce003d13&" alt="Product 1">
+      </a><h4>Home & Kitchen</h4>
+    
+    </article>
+    <article class="product"><a href="{{ url_for('fruits') }}">
+      <img src="https://cdn.discordapp.com/attachments/992065848502145085/1168121094209806346/fruits.jpg?ex=65509c8b&is=653e278b&hm=34ff838900126017673ccc30fc730e32d40a625b4b292dcf253243fea61eea95&" alt="Product 1">
+    </a><h4>Fruits & Vegetables</h4>
+      
+  </article>
+        <!-- Add more product articles here -->
+    </section></div>
+    <br><br>
+    
+  
+  <section id="about-us" class="about-section">
+    <h3>About Project</h3>
+    <p style="text-align: center; padding:10px;">
+      Explore the Project's Key Functionalities. Experience a World of Features:</p>
+    <div class="feature-cards">
+      <div class="feature-card">
+          <div class="feature-front">
+              <h3>Virtual Assistant</h3>
+              <img src="https://cdn.discordapp.com/attachments/992065848502145085/1167729173037596742/AI-bot-1.jpg?ex=654f2f8a&is=653cba8a&hm=4d125158e02e2ff974d255eac369aae6730661e2dddad84b8f0695ceb278922f&" width="75%" height="60%" alt="Dialog Flow Chatbot">
+          </div>
+          <div class="feature-back">
+              <p>The chatbot feature allows users to have interactive and natural conversations with the chatbot. It utilizes natural language processing (NLP) and machine learning to understand user input, enabling the chatbot to provide responses, answer questions, and perform tasks effectively. With this feature, users can engage with the system using text, making interactions intuitive and user-friendly. </p>
+          </div>
+      </div>
+      <div class="feature-card">
+          <div class="feature-front">
+              <h3>Recommendation System</h3>
+              <img src="https://cdn.discordapp.com/attachments/992065848502145085/1167729173624795186/recommendation.png?ex=654f2f8a&is=653cba8a&hm=240d60665ca1387a2de926a7e87adbab805008cc9fa18521622ecf53450f70f8&" width="75%" height="60%" alt="Recommendation System">
+          </div>
+          <div class="feature-back">
+              <p>This system employs advanced algorithms and data analysis techniques to understand user behavior and make tailored recommendations. Whether it's suggesting products, services, or content, the recommendation system provides valuable insights and options to users, helping them discover new items of interest and enhancing their engagement with the application.</p>
+          </div>
+      </div>
+      <div class="feature-card">
+          <div class="feature-front">
+              <h3> Availability Check</h3>
+              <img src="https://cdn.discordapp.com/attachments/992065848502145085/1167729173276663818/available.jpg?ex=654f2f8a&is=653cba8a&hm=8411cfdc1528c7badc14f7c078eaca326c251255af625da065c729c9a8d6cab1&" width="65%" height="50%" alt="Image Availability Check">
+          </div>
+          <div class="feature-back">
+              <p>This innovative feature allows users to determine the availability of specific fruits and vegetables by uploading images of these items. The system leverages image recognition and artificial intelligence to analyze the uploaded images and provide users with information about the availability, quality, and freshness of the items in question. </p>
+          </div>
+      </div>
+  </div>
+  </section><br><br>
+  <section id="contact-us" class="contact-section">
+    <h3>Contact Us</h3>
+    <p>If you have any questions or need assistance, please feel free to contact our support team:</p>
+    <ul>
+        <li>Email: <a href="mailto:contact@example.com">contact@example.com</a></li>
+        <li>Phone: <a href="tel:+1234567890">123-456-7890</a></li>
+    </ul>
+</section><br><br>
+    <footer>
+        <p>&copy; 2023 My Online Store. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '6538deb849313300074147cd' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: 'production'
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
+    </script>
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>

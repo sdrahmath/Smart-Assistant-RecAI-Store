@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <header>
+        <h1>My Online Store</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <title>Home and Kitchen products</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body style=" background-color: #90d2f0d9;">
+    <h1 style="text-align: center; padding:10px;">Home and Kitchen products</h1>
+
+    <!-- Search bar -->
+    <div class="search-container">
+        <input type="text" placeholder="Search for items" id="searchInput">
+        <button id="searchButton">Search</button>
+    </div>
+
+    <!-- Display items in custom card-like containers with 4 items per row -->
+    <div class="card-container">
+        {% for item in items %}
+        <div class="card"><a href="{{ url_for('select_kitchen', selected_item=item['name']) }}">
+            <img src="{{ item['image'] }}" alt="Sorry! Image not available" class="card-image"></a>
+            <div class="card-content">
+                <h4>{{ item['shortened_name'] }}</h4>
+                <p>Price: {{ item['actual_price'] }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        // JavaScript for handling search functionality
+        document.getElementById("searchButton").addEventListener("click", function () {
+            var searchInput = document.getElementById("searchInput").value.toLowerCase(); // Convert input to lowercase for case-insensitive search
+            var cardContainers = document.querySelectorAll(".card"); // Get all card containers
+    
+            // Iterate through each card container
+            cardContainers.forEach(function (card) {
+                var cardContent = card.querySelector(".card-content");
+                var itemName = cardContent.querySelector("h4").textContent.toLowerCase(); // Get the item name and convert to lowercase
+    
+                // Check if the item name contains the search input
+                if (itemName.includes(searchInput)) {
+                    card.style.display = "block"; // Show the card
+                } else {
+                    card.style.display = "none"; // Hide the card if it doesn't match the search input
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
+

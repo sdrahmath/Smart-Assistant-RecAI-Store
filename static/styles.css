@@ -1,0 +1,378 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #abfff7bf;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #014b5c;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    position: relative;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 10px;
+}
+h3{
+    text-align: center;
+}
+nav{
+    position: absolute;
+    bottom: 20px; /* Adjust this value to control the vertical position */
+    right: 10px;
+}
+
+nav ul {
+    margin-bottom: 10px;
+    list-style: none;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 10px
+}
+
+/* Product styles */
+.products {
+    display: flex;
+    
+    justify-content: center;
+    margin: 20px;
+}
+
+.product {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 33%);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+.product:hover {
+    background: linear-gradient(to bottom, #fff, #eee); 
+    transform: scale(1.02);
+    transition: transform 0.5s linear;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  }
+
+.product img {
+    max-width: 100%;
+    
+}
+
+.product h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+    margin: 10px 0;
+}
+
+.product button {
+    background-color: #6cb3ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    top:400px;
+    left:10%;
+    margin: 0 auto;
+    position: absolute;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.carousel-track {
+    background: white;
+    display: flex;
+    transition: transform 0.5s;
+}
+
+.carousel-slide {
+    flex: 0 0 25%;
+    text-align: center;
+    transition: transform 0.5s;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+}
+
+  
+.carousel-btn {
+    background-color: #0093b4;
+    /* color: #fff; */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #0b4856;
+    color: white;
+}
+
+
+
+
+/* styles.css */
+/* Style for the search container */
+.search-container {
+    background: rgba(255,255,255,1);
+    padding: 12px;
+    max-width: max-content;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+/* Style for the search input */
+#searchInput {
+    padding: 10px;
+    border: 2px solid #979797;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+/* Style for the search button */
+#searchButton {
+    background-color: #048d85;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+
+/* Style for the search button on hover */
+#searchButton:hover {
+    background-color: #024530;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(25% - 20px);
+    margin: 10px;
+    border: 1px solid #9e9d9db8;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0 2px 4px #898989;
+    text-align: center;
+    background: rgba(255,255,255,01);
+}
+
+.card-image {
+    mix-blend-mode: multiply;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+/* Add more custom styles as needed */
+/* Contact Us Section */
+.contact-section {
+    width: 50%;
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin: 20px 0;
+    border: 2px solid #878787;
+    border-radius: 20px;
+     /* Adjust the max-width as needed */
+    margin: 0 auto; /* This centers the block horizontally */
+}
+
+.contact-section h3 {
+    font-size: 28px;
+    color: #333;
+}
+
+.contact-section p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.contact-section ul {
+    
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.contact-section li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* About Us Section */
+.about-section {
+    background-color: #07a9ce7a;
+    padding: 40px 80px 40px 80px;
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: fit-content;
+    border-radius: 20px;
+     /* Adjust the max-width as needed */
+    margin: 0 auto;
+}
+
+.about-section h3 {
+    font-size: 28px;
+    color: #333;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Style for the feature cards container */
+.feature-cards {
+    display: flex;
+    justify-content: space-evenly;;
+}
+
+/* Style for each feature card */
+.feature-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Create a 3D effect */
+    margin: 20px;
+    cursor: pointer;
+}
+
+/* Style for the front and back of each card */
+.feature-front, .feature-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+/* Style for the front of the card */
+.feature-front {
+    background-color: #f9f9f9;
+    display: flex;
+    min-width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    justify-content: center;
+    transform: rotateY(0deg);
+}
+
+/* Style for the back of the card */
+.feature-back {
+    background-color: #f9f9f9;
+    display: flex;
+    min-width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    justify-content: center;
+    padding: 30px;
+    transform: rotateY(180deg); /* Initially flipped */
+}
+
+/* Hover effect to flip the card */
+.feature-card:hover .feature-front {
+    transform: rotateY(180deg);
+}
+
+.feature-card:hover .feature-back {
+    transform: rotateY(0deg);
+}
