@@ -15,6 +15,7 @@ The AI-Powered Online Store is an innovative e-commerce platform that leverages 
 The AI-Powered Online Store is designed to provide a seamless, engaging, and efficient shopping experience. Whether users are looking for convenience, personalized recommendations, or real-time stock updates, our project caters to their needs.
 
 ## Output
+The Output could take sometime to load based on your internet....
 ![Project Demo](images/Smart%20Virtual%20RecAI%20Store.gif)
 
 Start enjoying the future of e-commerce with the AI-Powered Online Store today!
